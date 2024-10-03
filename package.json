@@ -1,0 +1,32 @@
+{
+  "name": "quartz-template",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "serve": "cd quartz-module && npx quartz build -d ../content --serve",
+    "build": "cd quartz-module && npx quartz build -d ../content",
+    "test": "cd quartz-module && npx quartz build -d ../content --bundleInfo"
+  },
+  "config": {
+    "title": "Glimbourne",
+    "baseurl": "requiae.github.io/campaign-glimbourne",
+    "github": "https://github.com/Requiae/campaign-glimbourne"
+  },
+  "engines": {
+    "npm": ">=9.3.1",
+    "node": "20 || >=22"
+  },
+  "bin": {
+    "quartz": "./quartz-module/quartz/bootstrap-cli.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.19.9",
+    "prettier": "^3.3.3",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "@requiae/quartz-module": "file:quartz-module"
+  }
+}
